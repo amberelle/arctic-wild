@@ -14,6 +14,11 @@ body{
   font-family: $lgfont;
   display:flex;
 
+  @media only screen and (max-width:1000px){
+    display:none;
+    transition:all 1s;
+  }
+
 }
 .header{
    background-image: url(../image/img1.jpg);
@@ -78,24 +83,161 @@ button{
   font-family:$medfont;
   border:none;
 }
-img{
-  margin:0;
-  width:100%;
-}
-.content{
+.navigation2{
   display:flex;
-  flex-flow:row wrap;
-  border: 1px dotted;
-  background-color:red;
+
+  align-content:center;
+  justify-content: center;
+  background-color:gray;
+
+  .nav-list2{
+    display: flex;
+    list-style: none;
+    flex-direction:row;
+
+  ul {
+    width: 120px;
+    height: 50px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li{
+      display: flex;
+      align-items:center;
+      padding-right:20%;
+
+      font-family: $medfont;
+    }
+
+    }
+  }
+}
+.gallery{
+
   width:100%;
   height:100%;
+  transition: all;
 }
-.box{
-  flex-grow:1;
+
+// .gallery-img:hover {
+//   opacity: .8;
+//   cursor: pointer;
+//   transition-timing: ease-in-out;
+// }
+
+.row1{
+  display:flex;
+  flex-flow: row;
+  flex:initial;
+  width:100%;
+
+  @media only screen and (max-width:940px){
+    flex-flow:wrap;
+  }
+
 }
-.box:nth-child(1){
-  flex-grow:2;
+.raft{
+  background-image: url('../image/img2.jpg');
+  width:50%;
+  height:50vh;
+  background-size: cover;
+  background-position: center;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width: 940px){
+    width:100%;
+  }
 }
-.box:nth-child(2){
-  flex-shrink:2;
+.raft:hover {
+  transform: scale(1.1);
+}
+.tent{
+  background-image: url("../image/img3.jpg");
+  background-position: center;
+    background-size: cover;
+  width:25%;
+  height:50vh;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:940px){
+    display:flex;
+    flex-flow: row wrap;
+    width:50%;
+  }
+
+}
+.tent:hover {
+  transform: scale(1.1);
+}
+.hike{
+  background-image: url("../image/img4.jpg");
+  background-position: center;
+  background-size: cover;
+  width:25%;
+  height:50vh;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:940px){
+    display:flex;
+    flex-flow: row wrap;
+    width:50%;
+  }
+}
+.hike:hover {
+  transform: scale(1.1);
+}
+.row2{
+  display:flex;
+  flex-flow:row;
+  transition: all .5s;
+  @media only screen and (max-width:940px){
+    flex-flow:wrap;
+  }
+}
+.canoe{
+  background-image: url('../image/img5.jpg');
+  width:25%;
+  height:50vh;
+  background-size: cover;
+  background-position: center;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:940px){
+    display:flex;
+    flex-flow: row wrap;
+    width:50%;
+  }
+}
+.canoe:hover {
+  transform: scale(1.1);
+}
+.photo{
+  background-image: url("../image/img6.jpg");
+  background-position: center;
+    background-size: cover;
+  width:25%;
+  height:50vh;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:940px){
+    display:flex;
+    flex-flow: row wrap;
+    width:50%;
+  }
+
+}
+.photo:hover {
+  transform: scale(1.1);
+}
+.wagon{
+  background-image: url("../image/img7.jpg");
+  background-position: center;
+  background-size: cover;
+  width:50%;
+  height:50vh;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:940px){
+    display:flex;
+    flex-flow: row wrap;
+    width:100%;
+  }
+}
+.wagon:hover {
+  transform: scale(1.1);
 }
